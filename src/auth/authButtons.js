@@ -1,22 +1,22 @@
 import React from "react";
+import Login from "./Login";
+import Logout from "./Logout";
 import { useAuth0 } from '@auth0/auth0-react';
-import LoginButton from "./Login";
-import LogoutButton from "./Logout";
 
 
-function AuthButtons() {
-    const {
-        isAuthenticated
-    } = useAuth0();
+function AuthButtons () {
+        const {
+    isAuthenticated
+} = useAuth0();
     return (
-        <>
+        <div>
             {!isAuthenticated &&
-                <LoginButton />
+                <Login />
             }
             {isAuthenticated &&
-                <LogoutButton />
+                <Logout />
             }
-        </>
+        </div>
     );
 }
 export default AuthButtons;
