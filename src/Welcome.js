@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class Welcome extends Component {
-    render() {
+
+class Welcome extends React.Component {
+    render () {
         return (
-            <>
-                <h2>Welcome To books aplication</h2>
-                
-            </>
+            <div>
+                <h1>Welcome to the Book Store</h1>
+                <p>
+                    Please login to continue.
+                </p>
+            </div>
         );
     }
 }
